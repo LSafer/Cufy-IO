@@ -10,7 +10,6 @@
  */
 package cufy.io;
 
-import org.cufy.annotation.Beta;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +28,7 @@ import static cufy.io.FileException.NOT_EXIST;
  * @version 9 release (02-Nov-19)
  * @since 19-Jul-19
  */
-@Beta("idea flow")
+@Deprecated
 public interface FolderMap<K, V> extends FileMap<K, V> {
 	@Override
 	default void move(File.Synchronizer<?, ?> synchronizer, java.io.File output) {

@@ -10,7 +10,6 @@
  */
 package cufy.io;
 
-import org.cufy.annotation.Beta;
 import cufy.text.Format;
 
 import java.util.Map;
@@ -24,7 +23,7 @@ import java.util.Map;
  * @version 2 release (02-Nov-2019)
  * @since 30-Oct-2019
  */
-@Beta("idea flow")
+@Deprecated
 public interface FormatFileMap<K, V> extends FileMap<K, V> {
 	@Override
 	default Map<K, V> read(File.Synchronizer<?, ?> synchronizer) {

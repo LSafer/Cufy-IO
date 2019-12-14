@@ -11,8 +11,6 @@
 
 package cufy.io;
 
-import org.cufy.annotation.Beta;
-
 import java.io.File;
 import java.util.Arrays;
 
@@ -23,7 +21,7 @@ import java.util.Arrays;
  * @version 2 release (03-Nov-2019)
  * @since 31-Oct-2019
  */
-@Beta("ideas flow")
+@Deprecated
 public class FileException extends RuntimeException {
 	/**
 	 * Thrown when a file is already exist. And the process targeting it as an output file.

@@ -15,7 +15,4 @@
  * @version 3 release (02-Nov-2019)
  * @since 11-Jun-19
  */
-@Beta("all development paused | some methods may not work as expected")
 package cufy.io;
-
-import org.cufy.annotation.Beta;

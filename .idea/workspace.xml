@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5997102f-da89-4f9f-adc8-371086f3521c" name="Default Changelist" comment="" />
+    <list default="true" id="5997102f-da89-4f9f-adc8-371086f3521c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Sulim.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/FileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/FileException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/FileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/FileMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/FolderMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/FolderMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/FormatFileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/FormatFileMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/SerialFileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/SerialFileMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/package-info.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +39,11 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UvLMaycHAStqQH2jl5sEv84Sns" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,10 +52,43 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cufy.io" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Cufy-IO [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Cufy-IO [dependencies]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -60,7 +112,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576232074867</updated>
-      <workItem from="1576232076508" duration="393000" />
+      <workItem from="1576232076508" duration="1670000" />
+      <workItem from="1576331078278" duration="764000" />
     </task>
     <servers />
   </component>
@@ -68,6 +121,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="182" key="#Inspections" timestamp="1576331585544">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="182" key="#Inspections/0.0.1920.1050@0.0.1920.1050" timestamp="1576331585544" />
     <state x="756" y="383" width="408" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576232477152">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -76,6 +133,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="756" y="395" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1050@0.0.1920.1050" timestamp="1576232487357" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1576331404503">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576331404503" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1576331404503">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576331404503" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1576331404503">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576331404503" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1576331404503">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576331404503" />
+    <state width="604" height="264" key="javadoc.popup.new" timestamp="1576331168670">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="604" height="264" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1576331168670" />
     <state x="342" y="144" key="new project wizard" timestamp="1576232264581">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

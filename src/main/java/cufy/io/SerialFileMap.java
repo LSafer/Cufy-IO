@@ -1,7 +1,5 @@
 package cufy.io;
 
-import org.cufy.annotation.Beta;
-
 import java.io.Serializable;
 import java.util.Map;
 
@@ -14,7 +12,7 @@ import java.util.Map;
  * @version 1 release (03-Nov-2019)
  * @since 03-Oct-2019
  */
-@Beta("ideas flow")
+@Deprecated
 public interface SerialFileMap<K, V> extends FileMap<K, V>, Serializable {
 	@Override
 	default Map<K, V> read(File.Synchronizer<?, ?> synchronizer) {

@@ -10,8 +10,6 @@
  */
 package cufy.io;
 
-import org.cufy.annotation.Beta;
-
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -27,7 +25,7 @@ import java.util.function.Function;
  * @version 14 release (02-Nov-2019)
  * @since 11 Jun 2019
  */
-@Beta(value = "ideas flow")
+@Deprecated
 public interface FileMap<K, V> extends Map<K, V> {
 	/**
 	 * Load this from the linked {@link File}. Using the given {@link cufy.io.File.Synchronizer}.

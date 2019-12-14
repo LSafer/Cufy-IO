@@ -10,17 +10,16 @@
  */
 package cufy.io;
 
-import org.cufy.annotation.Beta;
-import cufy.lang.alter.Cast;
-import cufy.lang.Loop;
 import cufy.lang.Instructor;
-import cufy.lang.alter.For;
-import cufy.lang.alter.Foreach;
-import cufy.lang.alter.Parallel;
+import cufy.lang.Loop;
 import cufy.text.Format;
-import org.cufy.util.ArrayUtil;
-import org.cufy.util.ObjectUtil;
-import org.cufy.util.StringUtil;
+import cufy.util.ArrayUtil;
+import cufy.util.ObjectUtil;
+import cufy.util.StringUtil;
+import org.cufy.lang.Cast;
+import org.cufy.lang.For;
+import org.cufy.lang.Foreach;
+import org.cufy.lang.Parallel;
 
 import java.io.*;
 import java.net.URI;
@@ -39,7 +38,6 @@ import static cufy.io.FileException.*;
  * @version 10 release (03-Nov-2019)
  * @since 18 May 2019
  */
-@Beta("ideas flow")
 public class File extends java.io.File {
 	/**
 	 * Flags that the process have been canceled.
@@ -780,6 +778,7 @@ public class File extends java.io.File {
 	 * @param queries the queries of the wanted files
 	 * @return files that have specific queries
 	 */
+	@Deprecated
 	public List<File> query(String... queries) {
 		List<File> found = new ArrayList<>();
 
