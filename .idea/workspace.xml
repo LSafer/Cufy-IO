@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5997102f-da89-4f9f-adc8-371086f3521c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cufy/io/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cufy/io/File.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cufy/io/FileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +61,7 @@
       <recent name="cufy.io" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.FileTest.test">
     <configuration name="Cufy-IO [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -76,8 +81,29 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="FileTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;cufy.io.FileTest.test&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FileTest.test" />
         <item itemvalue="Gradle.Cufy-IO [dependencies]" />
       </list>
     </recent_temporary>
@@ -108,7 +134,7 @@
       <workItem from="1576331078278" duration="2068000" />
       <workItem from="1577393824627" duration="599000" />
       <workItem from="1577569482554" duration="598000" />
-      <workItem from="1577656003945" duration="1960000" />
+      <workItem from="1577656003945" duration="2563000" />
     </task>
     <servers />
   </component>
@@ -136,22 +162,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1577783661775" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1577657293831">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1577784098956">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1577657293831" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1577657293831">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1577784098956" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1577784098956">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1577657293831" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1577657293831">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1577784098956" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1577784098956">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1577657293831" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1577657293831">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1577784098956" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1577784098956">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1577657293831" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1577784098956" />
     <state x="656" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1577656069606">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
