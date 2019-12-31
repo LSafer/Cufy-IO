@@ -9,9 +9,9 @@ repositories {
 }
 
 dependencies {
-	implementation 'com.github.LSaferSE:Cufy-Util:0.0.1'
-	implementation 'com.github.LSaferSE:Cufy:0.0.1'
-	implementation 'com.github.LSaferSE:Cufy-Concurrent:0.0.1'
+	compileOnly 'com.github.cufyorg:util:0.0.1'
+	compileOnly 'com.github.cufyorg:base:0.0.2'
+	compileOnly 'com.github.cufyorg:concurrent:0.0.2'
 
 	testImplementation 'junit:junit:4.11'
 }

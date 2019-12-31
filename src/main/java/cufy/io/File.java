@@ -16,7 +16,7 @@ import cufy.text.Format;
 import cufy.util.ArrayUtil;
 import cufy.util.ObjectUtil;
 import cufy.util.StringUtil;
-import org.cufy.lang.Cast;
+import org.cufy.lang.BaseConverter;
 import org.cufy.lang.For;
 import org.cufy.lang.Foreach;
 import org.cufy.lang.Parallel;
@@ -632,7 +632,7 @@ public class File extends java.io.File {
 
 			if (number.charAt(0) == '(' && number.charAt(number.length() - 1) == ')') {
 				number = StringUtil.crop(split[split.length - 1], 1, 1);
-				this.suffix = Cast.global.cast(number, Integer.class);
+				this.suffix = BaseConverter.global.convert(number, Integer.class);
 				split = ArrayUtil.sublist(split, 0, 1);
 				return this.suffixless_title = StringUtil.join(" ", "", split);
 			}
