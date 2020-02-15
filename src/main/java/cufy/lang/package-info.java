@@ -9,10 +9,10 @@
  *  with the word "Editor" on top of it.
  */
 /**
- * Classes that deals with Input/Output ports.
+ * Classes that can help java language.
  *
  * @author LSaferSE
- * @version 4 release (15-Feb-2020)
- * @since 11-Jun-2019
+ * @version 1 release (15-Feb-20)
+ * @since 15-Feb-20
  */
-package cufy.io;
+package cufy.lang;
