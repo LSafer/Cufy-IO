@@ -8,10 +8,12 @@
  *  By adding a new header (at the bottom of this header)
  *  with the word "Editor" on top of it.
  */
-package cufy.io;
+package org.cufy.io;
 
+import cufy.io.BufferedReader;
+import cufy.io.*;
 import cufy.lang.Instructor;
-import cufy.lang.Loadable;
+import cufy.lang.SourceLoadable;
 
 import java.io.*;
 import java.net.URL;
@@ -21,19 +23,20 @@ import java.util.Objects;
 /**
  * A loadable that uses {@link java.net.URL} as it's container.
  *
+ * @param <D> the decoder of this loadable
  * @author LSaferSE
- * @version 2 release (15-Feb-2020)
+ * @version 3 release (16-Feb-2020)
  * @since 15-Feb-2020
  */
-public interface URLLoadable extends Loadable {
+public interface URLLoadable<D> extends SourceLoadable<URL> {
 	@Override
 	default InputStream getInputStream() throws IOException {
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(true);
 		connection.setDoOutput(false);
 
 		InputStream base = connection.getInputStream();
-		InputStream buff = new BufferedInputStream(base);
+		InputStream buff = new cufy.io.BufferedInputStream(base);
 
 		return buff;
 	}
@@ -41,12 +44,12 @@ public interface URLLoadable extends Loadable {
 	default InputStream getInputStream(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(true);
 		connection.setDoOutput(false);
 
 		InputStream base = connection.getInputStream();
-		InputStream buff = new BufferedInputStream(base);
+		InputStream buff = new cufy.io.BufferedInputStream(base);
 		InputStream ctrl = new RemoteInputStream(instructor, buff);
 
 		return ctrl;
@@ -54,7 +57,7 @@ public interface URLLoadable extends Loadable {
 
 	@Override
 	default OutputStream getOutputStream() throws IOException {
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(false);
 		connection.setDoOutput(true);
 
@@ -66,7 +69,7 @@ public interface URLLoadable extends Loadable {
 	default OutputStream getOutputStream(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(false);
 		connection.setDoOutput(true);
 
@@ -78,14 +81,14 @@ public interface URLLoadable extends Loadable {
 
 	@Override
 	default Reader getReader() throws IOException {
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(true);
 		connection.setDoOutput(false);
 
 		InputStream base = connection.getInputStream();
 
 		Reader conv = new InputStreamReader(base);
-		Reader buff = new BufferedReader(conv);
+		Reader buff = new cufy.io.BufferedReader(conv);
 
 		return buff;
 	}
@@ -93,7 +96,7 @@ public interface URLLoadable extends Loadable {
 	default Reader getReader(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(true);
 		connection.setDoOutput(false);
 
@@ -108,7 +111,7 @@ public interface URLLoadable extends Loadable {
 
 	@Override
 	default Writer getWriter() throws IOException {
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(false);
 		connection.setDoOutput(true);
 
@@ -122,7 +125,7 @@ public interface URLLoadable extends Loadable {
 	default Writer getWriter(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		URLConnection connection = this.getURL().openConnection();
+		URLConnection connection = this.getSource().openConnection();
 		connection.setDoInput(false);
 		connection.setDoOutput(true);
 
@@ -133,11 +136,4 @@ public interface URLLoadable extends Loadable {
 
 		return ctrl;
 	}
-
-	/**
-	 * Get the url of this to load from.
-	 *
-	 * @return the url that this loadable loads from
-	 */
-	URL getURL();
 }
