@@ -9,10 +9,10 @@
  *  with the word "Editor" on top of it.
  */
 /**
- * All about java and text.
+ * Classes that deals with Input/Output ports.
  *
  * @author LSaferSE
- * @version 2 release (14-Feb-20)
- * @since 13-Feb-20
+ * @version 1 release (16-Feb-2020)
+ * @since 16-Feb-2020
  */
-package cufy.text;
+package org.cufy.io;

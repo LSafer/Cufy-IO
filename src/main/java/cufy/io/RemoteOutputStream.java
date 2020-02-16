@@ -76,7 +76,7 @@ public class RemoteOutputStream extends OutputStream {
 	 * Execute the given code with respect to the {@link #instructor}.
 	 *
 	 * @param runnable to be executed
-	 * @throws IOException if the instructor has specified that this stream shall be closed. Or if any other I/O exception occurred.
+	 * @throws IOException          if the instructor has specified that this stream shall be closed. Or if any other I/O exception occurred.
 	 * @throws NullPointerException if the given runnable is null
 	 */
 	protected void exec(ThrowingRunnable<IOException> runnable) throws IOException {
