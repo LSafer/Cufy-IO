@@ -11,7 +11,7 @@
 package org.cufy.text;
 
 import cufy.lang.Instructor;
-import cufy.lang.InterpreterLoadable;
+import org.cufy.lang.CodecImplLoadable;
 import cufy.text.Format;
 
 import java.io.IOException;
@@ -22,17 +22,16 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * An object that can be loaded from a container. And that container provides an unformatted data that requires that loadable to format it.
  *
- * @param <P> the type of the path of this loadable
  * @author LSaferSE
  * @version 3 release (16-Feb-2020)
  * @since 13-Feb-2020
  */
-public interface FormatLoadable<P> extends InterpreterLoadable<Format> {
+public interface FormatLoadable extends CodecImplLoadable<Format> {
 	@Override
 	default void load() throws IOException {
 		AtomicReference buffer = new AtomicReference(this);
 		try (Reader reader = this.getReader()) {
-			this.getInterpreter().parse(
+			this.getCodec().parse(
 					buffer,
 					reader,
 					null,
@@ -44,7 +43,7 @@ public interface FormatLoadable<P> extends InterpreterLoadable<Format> {
 	default void load(Instructor instructor) throws IOException {
 		AtomicReference buffer = new AtomicReference(this);
 		try (Reader reader = this.getReader(instructor)) {
-			this.getInterpreter().parse(
+			this.getCodec().parse(
 					buffer,
 					reader,
 					null,
@@ -56,7 +55,7 @@ public interface FormatLoadable<P> extends InterpreterLoadable<Format> {
 	@Override
 	default void save() throws IOException {
 		try (Writer writer = this.getWriter()) {
-			this.getInterpreter().format(
+			this.getCodec().format(
 					writer,
 					this,
 					null,
@@ -67,7 +66,7 @@ public interface FormatLoadable<P> extends InterpreterLoadable<Format> {
 	@Override
 	default void save(Instructor instructor) throws IOException {
 		try (Writer writer = this.getWriter(instructor)) {
-			this.getInterpreter().format(
+			this.getCodec().format(
 					writer,
 					this,
 					null,

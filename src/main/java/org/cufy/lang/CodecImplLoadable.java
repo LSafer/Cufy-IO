@@ -8,29 +8,31 @@
  *  By adding a new header (at the bottom of this header)
  *  with the word "Editor" on top of it.
  */
-package cufy.lang;
+package org.cufy.lang;
+
+import cufy.lang.Loadable;
 
 /**
- * A loadable that depends on an interpreter.
+ * A loadable that depends on a codec to encode and decode data.
  *
- * @param <D> get the decoder of this loadable
+ * @param <C> the Codec of this loadable
  * @author LSaferSE
  * @version 1 release (16-Feb-2020)
  * @since 16-Feb-2020
  */
-public interface InterpreterLoadable<D> extends Loadable {
+public interface CodecImplLoadable<C> extends Loadable {
 	/**
-	 * Get the interpreter of this loadable.
+	 * Get the codec of this loadable.
 	 *
-	 * @return the decoder of this loadable
+	 * @return the codec of this loadable
 	 */
-	D getInterpreter();
+	C getCodec();
 	/**
-	 * Set the interpreter of this loadable.
+	 * Set the codec of this loadable.
 	 *
-	 * @param decoder the new interpreter to be set
+	 * @param codec the new codec to be set
 	 */
-	default void setInterpreter(D decoder) {
-		throw new UnsupportedOperationException("setDecoder(D decoder)");
+	default void setCodec(C codec) {
+		throw new UnsupportedOperationException("setCodec(C codec))");
 	}
 }

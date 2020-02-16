@@ -13,7 +13,7 @@ package org.cufy.io;
 import cufy.io.BufferedReader;
 import cufy.io.*;
 import cufy.lang.Instructor;
-import cufy.lang.SourceLoadable;
+import org.cufy.lang.PathImplLoadable;
 
 import java.io.*;
 import java.util.Objects;
@@ -21,15 +21,14 @@ import java.util.Objects;
 /**
  * A loadable that uses {@link File} as it's container.
  *
- * @param <D> the decoder of this loadable
  * @author LSaferSE
  * @version 2 release (16-Feb-2020)
  * @since 14-Feb-2020
  */
-public interface FileLoadable<D> extends SourceLoadable<File> {
+public interface FileLoadable extends PathImplLoadable<File> {
 	@Override
 	default InputStream getInputStream() throws IOException {
-		InputStream base = new FileInputStream(this.getSource());
+		InputStream base = new FileInputStream(this.getPath());
 		InputStream buff = new cufy.io.BufferedInputStream(base);
 
 		return buff;
@@ -38,7 +37,7 @@ public interface FileLoadable<D> extends SourceLoadable<File> {
 	default InputStream getInputStream(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		InputStream base = new FileInputStream(this.getSource());
+		InputStream base = new FileInputStream(this.getPath());
 		InputStream buff = new cufy.io.BufferedInputStream(base);
 		InputStream ctrl = new RemoteInputStream(instructor, buff);
 
@@ -47,7 +46,7 @@ public interface FileLoadable<D> extends SourceLoadable<File> {
 
 	@Override
 	default OutputStream getOutputStream() throws IOException {
-		OutputStream base = new FileOutputStream(this.getSource());
+		OutputStream base = new FileOutputStream(this.getPath());
 
 		return base;
 	}
@@ -55,7 +54,7 @@ public interface FileLoadable<D> extends SourceLoadable<File> {
 	default OutputStream getOutputStream(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		OutputStream base = new FileOutputStream(this.getSource());
+		OutputStream base = new FileOutputStream(this.getPath());
 		OutputStream ctrl = new RemoteOutputStream(instructor, base);
 
 		return ctrl;
@@ -63,7 +62,7 @@ public interface FileLoadable<D> extends SourceLoadable<File> {
 
 	@Override
 	default Reader getReader() throws IOException {
-		Reader base = new FileReader(this.getSource());
+		Reader base = new FileReader(this.getPath());
 		Reader buff = new cufy.io.BufferedReader(base);
 
 		return buff;
@@ -72,7 +71,7 @@ public interface FileLoadable<D> extends SourceLoadable<File> {
 	default Reader getReader(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		Reader base = new FileReader(this.getSource());
+		Reader base = new FileReader(this.getPath());
 		Reader buff = new BufferedReader(base);
 		Reader ctrl = new RemoteReader(instructor, buff);
 
@@ -81,7 +80,7 @@ public interface FileLoadable<D> extends SourceLoadable<File> {
 
 	@Override
 	default Writer getWriter() throws IOException {
-		Writer base = new FileWriter(this.getSource());
+		Writer base = new FileWriter(this.getPath());
 
 		return base;
 	}
@@ -89,7 +88,7 @@ public interface FileLoadable<D> extends SourceLoadable<File> {
 	default Writer getWriter(Instructor instructor) throws IOException {
 		Objects.requireNonNull(instructor, "instructor");
 
-		Writer base = new FileWriter(this.getSource());
+		Writer base = new FileWriter(this.getPath());
 		Writer ctrl = new RemoteWriter(instructor, base);
 
 		return ctrl;

@@ -8,29 +8,31 @@
  *  By adding a new header (at the bottom of this header)
  *  with the word "Editor" on top of it.
  */
-package cufy.lang;
+package org.cufy.lang;
+
+import cufy.lang.Loadable;
 
 /**
- * A loadable that depends on a source.
+ * A loadable that depends on a path to locate where the data is stored.
  *
  * @param <P> the type of the path of the loadable
  * @author LSaferSE
  * @version 1 release (16-Feb-2020)
  * @since 16-Feb-2020
  */
-public interface SourceLoadable<P> extends Loadable {
+public interface PathImplLoadable<P> extends Loadable {
 	/**
-	 * Get the source of this loadable.
+	 * Get the path of this loadable.
 	 *
-	 * @return the source of this loadable.
+	 * @return the path of this loadable.
 	 */
-	P getSource();
+	P getPath();
 	/**
-	 * Set the source of this loadable to a new source.
+	 * Set the path of this loadable to a new path.
 	 *
-	 * @param path the new source to be set
+	 * @param path the new path to be set
 	 */
-	default void setSource(P path) {
+	default void setPath(P path) {
 		throw new UnsupportedOperationException("setPath(P path)");
 	}
 }

@@ -13,7 +13,7 @@ package cufy.lang;
 import cufy.beans.Bean;
 import cufy.text.Format;
 import org.cufy.io.FileLoadable;
-import org.cufy.io.URLLoadable;
+import org.cufy.net.URLLoadable;
 import org.cufy.lang.JSONConverter;
 import org.cufy.text.FormatLoadable;
 import org.cufy.text.JSON;
@@ -38,11 +38,11 @@ public class LoadableTest {
 			@Property(key = @Value(value = "list", converter = JSONConverter.class))
 			final public List<String> list = new ArrayList<>();
 			@Override
-			public Format getInterpreter() {
+			public Format getCodec() {
 				return JSON.global;
 			}
 			@Override
-			public File getSource() {
+			public File getPath() {
 				return temp;
 			}
 		}
@@ -96,11 +96,11 @@ public class LoadableTest {
 			public String zero;
 
 			@Override
-			public Format getInterpreter() {
+			public Format getCodec() {
 				return JSON.global;
 			}
 			@Override
-			public URL getSource() {
+			public URL getPath() {
 				return target;
 			}
 
