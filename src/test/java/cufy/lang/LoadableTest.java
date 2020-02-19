@@ -13,8 +13,8 @@ package cufy.lang;
 import cufy.beans.Bean;
 import cufy.text.Format;
 import org.cufy.io.FileLoadable;
-import org.cufy.net.URLLoadable;
 import org.cufy.lang.JSONConverter;
+import org.cufy.net.URLLoadable;
 import org.cufy.text.FormatLoadable;
 import org.cufy.text.JSON;
 import org.junit.Assert;
@@ -37,6 +37,7 @@ public class LoadableTest {
 		class TestBean implements Bean, FileLoadable, FormatLoadable {
 			@Property(key = @Value(value = "list", converter = JSONConverter.class))
 			final public List<String> list = new ArrayList<>();
+
 			@Override
 			public Format getCodec() {
 				return JSON.global;
@@ -61,6 +62,8 @@ public class LoadableTest {
 						temp.delete();
 					} else if (!temp.exists()) {
 						temp.createNewFile();
+					} else {
+						throw e;
 					}
 				}
 		}
