@@ -10,6 +10,7 @@
  */
 package org.cufy.net;
 
+import cufy.io.BufferedInputStream;
 import cufy.io.BufferedReader;
 import cufy.io.*;
 import cufy.lang.Instructor;
@@ -35,7 +36,7 @@ public interface URLLoadable extends PathImplLoadable<URL> {
 		connection.setDoOutput(false);
 
 		InputStream base = connection.getInputStream();
-		InputStream buff = new cufy.io.BufferedInputStream(base);
+		InputStream buff = new BufferedInputStream(base);
 
 		return buff;
 	}
@@ -48,7 +49,7 @@ public interface URLLoadable extends PathImplLoadable<URL> {
 		connection.setDoOutput(false);
 
 		InputStream base = connection.getInputStream();
-		InputStream buff = new cufy.io.BufferedInputStream(base);
+		InputStream buff = new BufferedInputStream(base);
 		InputStream ctrl = new RemoteInputStream(instructor, buff);
 
 		return ctrl;
@@ -87,7 +88,7 @@ public interface URLLoadable extends PathImplLoadable<URL> {
 		InputStream base = connection.getInputStream();
 
 		Reader conv = new InputStreamReader(base);
-		Reader buff = new cufy.io.BufferedReader(conv);
+		Reader buff = new BufferedReader(conv);
 
 		return buff;
 	}
