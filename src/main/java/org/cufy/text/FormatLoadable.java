@@ -11,8 +11,8 @@
 package org.cufy.text;
 
 import cufy.lang.Instructor;
-import org.cufy.lang.CodecImplLoadable;
 import cufy.text.Format;
+import org.cufy.lang.CodecImplLoadable;
 
 import java.io.IOException;
 import java.io.Reader;
