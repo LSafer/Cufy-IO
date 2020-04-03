@@ -10,9 +10,9 @@
  */
 package cufy.io;
 
-import cufy.lang.Instructor;
-import org.cufy.lang.Do;
-import org.cufy.util.function.ThrowingRunnable;
+import cufy.concurrent.Do;
+import cufy.concurrent.Instructor;
+import cufy.util.function.ThrowingRunnable;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -55,12 +55,14 @@ public class RemoteInputStream extends InputStream {
 		this.exec(() -> atomic[0] = this.stream.read());
 		return atomic[0];
 	}
+
 	@Override
 	public int read(byte[] b) throws IOException {
 		int[] atomic = new int[1];
 		this.exec(() -> atomic[0] = this.stream.read(b));
 		return atomic[0];
 	}
+
 	@Override
 	public int read(byte[] b, int off, int len) throws IOException {
 		int[] atomic = new int[1];

@@ -141,6 +141,7 @@ public class Buffer<T> {
 	public T read() {
 		return this.cursor < this.size ? this.data[this.cursor++] : null;
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -155,6 +156,7 @@ public class Buffer<T> {
 	public int read(Object[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -169,6 +171,7 @@ public class Buffer<T> {
 	public int read(boolean[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -183,6 +186,7 @@ public class Buffer<T> {
 	public int read(byte[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -197,6 +201,7 @@ public class Buffer<T> {
 	public int read(char[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -211,6 +216,7 @@ public class Buffer<T> {
 	public int read(double[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -225,6 +231,7 @@ public class Buffer<T> {
 	public int read(float[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -239,6 +246,7 @@ public class Buffer<T> {
 	public int read(int[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -253,6 +261,7 @@ public class Buffer<T> {
 	public int read(long[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -267,6 +276,7 @@ public class Buffer<T> {
 	public int read(short[] buffer, int off, int len) {
 		return this.read0(buffer, off, len);
 	}
+
 	/**
 	 * Reads values into a portion of an array.
 	 *
@@ -340,6 +350,7 @@ public class Buffer<T> {
 
 		this.data[index] = value;
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -352,6 +363,7 @@ public class Buffer<T> {
 	public void write(int[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -364,6 +376,7 @@ public class Buffer<T> {
 	public void write(char[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -376,6 +389,7 @@ public class Buffer<T> {
 	public void write(byte[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -388,6 +402,7 @@ public class Buffer<T> {
 	public void write(short[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -400,6 +415,7 @@ public class Buffer<T> {
 	public void write(boolean[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -412,6 +428,7 @@ public class Buffer<T> {
 	public void write(long[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -424,6 +441,7 @@ public class Buffer<T> {
 	public void write(double[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *
@@ -436,6 +454,7 @@ public class Buffer<T> {
 	public void write(float[] buffer, int off, int len) {
 		this.write0(buffer, off, len);
 	}
+
 	/**
 	 * Add the given values to this on were the cursor of this buffer is on. Then increment the cursor of this by the length of the given collection.
 	 *

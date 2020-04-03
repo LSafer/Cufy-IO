@@ -10,9 +10,9 @@
  */
 package cufy.io;
 
-import cufy.lang.Instructor;
-import org.cufy.lang.Do;
-import org.cufy.util.function.ThrowingRunnable;
+import cufy.concurrent.Do;
+import cufy.concurrent.Instructor;
+import cufy.util.function.ThrowingRunnable;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -56,18 +56,21 @@ public class RemoteReader extends Reader {
 		this.exec(() -> atomic[0] = this.reader.read(target));
 		return atomic[0];
 	}
+
 	@Override
 	public int read() throws IOException {
 		int[] atomic = new int[1];
 		this.exec(() -> atomic[0] = this.reader.read());
 		return atomic[0];
 	}
+
 	@Override
 	public int read(char[] cbuf) throws IOException {
 		int[] atomic = new int[1];
 		this.exec(() -> atomic[0] = this.reader.read(cbuf));
 		return atomic[0];
 	}
+
 	@Override
 	public int read(char[] cbuf, int off, int len) throws IOException {
 		int[] atomic = new int[1];

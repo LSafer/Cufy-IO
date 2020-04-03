@@ -10,9 +10,9 @@
  */
 package cufy.io;
 
-import cufy.lang.Instructor;
-import org.cufy.lang.Do;
-import org.cufy.util.function.ThrowingRunnable;
+import cufy.concurrent.Do;
+import cufy.concurrent.Instructor;
+import cufy.util.function.ThrowingRunnable;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -53,10 +53,12 @@ public class RemoteOutputStream extends OutputStream {
 	public void write(int b) throws IOException {
 		this.exec(() -> this.stream.write(b));
 	}
+
 	@Override
 	public void write(byte[] b) throws IOException {
 		this.exec(() -> this.stream.write(b));
 	}
+
 	@Override
 	public void write(byte[] b, int off, int len) throws IOException {
 		this.exec(() -> this.stream.write(b, off, len));

@@ -10,9 +10,9 @@
  */
 package cufy.io;
 
-import cufy.lang.Instructor;
-import org.cufy.lang.Do;
-import org.cufy.util.function.ThrowingRunnable;
+import cufy.concurrent.Do;
+import cufy.concurrent.Instructor;
+import cufy.util.function.ThrowingRunnable;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -53,18 +53,22 @@ public class RemoteWriter extends Writer {
 	public void write(int c) throws IOException {
 		this.exec(() -> this.writer.write(c));
 	}
+
 	@Override
 	public void write(char[] cbuf) throws IOException {
 		this.exec(() -> this.writer.write(cbuf));
 	}
+
 	@Override
 	public void write(char[] cbuf, int off, int len) throws IOException {
 		this.exec(() -> this.writer.write(cbuf, off, len));
 	}
+
 	@Override
 	public void write(String str) throws IOException {
 		this.exec(() -> this.writer.write(str));
 	}
+
 	@Override
 	public void write(String str, int off, int len) throws IOException {
 		this.exec(() -> this.writer.write(str, off, len));
@@ -75,11 +79,13 @@ public class RemoteWriter extends Writer {
 		this.exec(() -> this.writer.append(csq));
 		return this;
 	}
+
 	@Override
 	public Writer append(CharSequence csq, int start, int end) throws IOException {
 		this.exec(() -> this.writer.append(csq, start, end));
 		return this;
 	}
+
 	@Override
 	public Writer append(char c) throws IOException {
 		this.exec(() -> this.writer.append(c));

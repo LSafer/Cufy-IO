@@ -10,8 +10,8 @@
  */
 package cufy.io;
 
-import cufy.lang.Instructor;
-import cufy.lang.Loop;
+import cufy.concurrent.Instructor;
+import cufy.concurrent.Loop;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,6 +29,7 @@ public class RemoteInputStreamTest {
 		Instructor instructor = new Instructor();
 		RemoteInputStream stream = new RemoteInputStream(instructor, new InputStream() {
 			Reader reader = new StringReader(str);
+
 			@Override
 			public int read() throws IOException {
 				return reader.read();

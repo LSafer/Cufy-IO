@@ -74,6 +74,7 @@ public class BufferedReader extends Reader {
 			return n;
 		}
 	}
+
 	@Override
 	public int read() throws IOException {
 		synchronized (super.lock) {
@@ -90,6 +91,7 @@ public class BufferedReader extends Reader {
 			}
 		}
 	}
+
 	@Override
 	public int read(char[] cbuf) throws IOException {
 		synchronized (this.lock) {
@@ -97,6 +99,7 @@ public class BufferedReader extends Reader {
 			return this.read(cbuf, 0, cbuf.length);
 		}
 	}
+
 	@Override
 	public int read(char[] cbuf, int off, int len) throws IOException {
 		synchronized (super.lock) {

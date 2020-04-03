@@ -47,6 +47,7 @@ public class BufferedReaderTest {
 		Assert.assertEquals("Can't read at all!", "ABC", s);
 		Assert.assertEquals("Remark don't work!", "ABC", s1);
 	}
+
 	@SuppressWarnings("StringConcatenationInLoop")
 	@Test
 	public void read_mark_skip_reset_followup() throws IOException {

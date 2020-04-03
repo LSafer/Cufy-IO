@@ -10,8 +10,8 @@
  */
 package cufy.io;
 
-import cufy.lang.Instructor;
-import cufy.lang.Loop;
+import cufy.concurrent.Instructor;
+import cufy.concurrent.Loop;
 import org.junit.Assert;
 import org.junit.Test;
 

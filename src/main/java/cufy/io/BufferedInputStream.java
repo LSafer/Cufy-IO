@@ -59,11 +59,13 @@ public class BufferedInputStream extends InputStream {
 			return value;
 		}
 	}
+
 	@Override
 	public int read(byte[] b) throws IOException {
 		Objects.requireNonNull(b, "b");
 		return this.read(b, 0, b.length);
 	}
+
 	@Override
 	public int read(byte[] bytes, int pos, int length) throws IOException {
 		//assertion

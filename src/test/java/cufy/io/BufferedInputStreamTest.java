@@ -26,6 +26,7 @@ public class BufferedInputStreamTest {
 		String text = "ABC" + "DEF";
 		InputStream stream = new BufferedInputStream(new InputStream() {
 			Reader reader = new StringReader(text);
+
 			@Override
 			public int read() throws IOException {
 				return reader.read();
@@ -54,6 +55,7 @@ public class BufferedInputStreamTest {
 		Assert.assertEquals("Can't read at all!", "ABC", s);
 		Assert.assertEquals("Remark don't work!", "ABC", s1);
 	}
+
 	@SuppressWarnings("StringConcatenationInLoop")
 	@Test
 	public void read_mark_skip_reset_followup() throws IOException {
@@ -61,6 +63,7 @@ public class BufferedInputStreamTest {
 
 		InputStream stream = new InputStream() {
 			Reader reader = new StringReader(str);
+
 			@Override
 			public int read() throws IOException {
 				return reader.read();
