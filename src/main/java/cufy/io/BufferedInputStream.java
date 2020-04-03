@@ -94,7 +94,7 @@ public class BufferedInputStream extends InputStream {
 
 		//the end
 		if (read == -1)
-			return rewind;
+			return rewind == 0 ? -1 : rewind;
 
 		//sneak copy
 		if (this.buffer != null)
