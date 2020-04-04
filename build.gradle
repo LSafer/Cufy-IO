@@ -9,13 +9,15 @@ repositories {
 }
 
 dependencies {
-	compileOnly 'com.github.cufyorg:util:0.1.0-beta2'
-	compileOnly 'com.github.cufyorg:base:0.1.0-beta4'
-	compileOnly 'com.github.cufyorg:concurrent:0.1.0-beta1'
+	compileOnly 'com.github.cufyorg:util:0.1.0'
+	compileOnly 'com.github.cufyorg:base:0.1.0'
+	compileOnly 'com.github.cufyorg:concurrent:0.1.0'
 
-	testImplementation 'com.github.cufyorg:util:0.1.0-beta2'
-	testImplementation 'com.github.cufyorg:base:0.1.0-beta4'
-	testImplementation 'com.github.cufyorg:concurrent:0.1.0-beta1'
+	testImplementation 'com.github.cufyorg:util:0.1.0'
+	testImplementation 'com.github.cufyorg:base:0.1.0'
+	testImplementation 'com.github.cufyorg:concurrent:0.1.0'
+	testImplementation 'com.github.cufyorg:beans:0.1.0'
+	testImplementation 'com.github.cufyorg:json:0.1.0'
 	testImplementation 'junit:junit:4.11'
 }
 
