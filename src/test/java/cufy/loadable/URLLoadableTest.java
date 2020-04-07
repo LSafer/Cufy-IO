@@ -4,8 +4,6 @@ import cufy.beans.AbstractBean;
 import cufy.meta.MetaObject;
 import cufy.text.Format;
 import cufy.text.JSON;
-import cufy.loadable.FileLoadable;
-import cufy.loadable.FormatLoadable;
 import org.junit.Assert;
 import org.junit.Test;
 
